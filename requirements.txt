@@ -38,3 +38,4 @@ tzdata==2025.2
 uvicorn==0.34.0
 wrapt==1.17.2
 kagglehub
+seaborn
