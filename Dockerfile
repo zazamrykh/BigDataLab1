@@ -6,6 +6,6 @@ WORKDIR /app
 
 COPY . .
 
-RUN pip install --no-cache-dir -r docker_requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 CMD ["python", "src/api.py", "glove-wiki-gigaword-50", "./runs/train1/best_catboost_model.cbm"]
