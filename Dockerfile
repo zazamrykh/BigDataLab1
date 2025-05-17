@@ -8,4 +8,4 @@ COPY . .
 
 RUN pip install --no-cache-dir -r docker_requirements.txt
 
-CMD ["python", "src/api.py", "glove-wiki-gigaword-50", "./runs/train1/best_catboost_model.cbm"]
+CMD ["python", "src/api.py", "./runs/train1/best_catboost_model.cbm"]
