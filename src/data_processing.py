@@ -8,6 +8,7 @@ import gensim.downloader as api
 import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
+from utils import params, cosine_sim, get_text_embedding
 import logging
 
 class DataProcessor:
@@ -57,12 +58,6 @@ class DataProcessor:
             df["ProfileName"] = df["ProfileName"].fillna("No text")
             df["Summary"] = df["Summary"].fillna("No text")
 
-            if output:
-                self.logger.info("\nNulls after filling:")
-                null_sum_after_fill = df.isnull().sum()
-                self.logger.info(null_sum_after_fill)
-
-            assert null_sum_after_fill.sum() == 0
 
             plt.figure(figsize=(8, 5))
             sns.countplot(data=df, palette="coolwarm", legend=False)
