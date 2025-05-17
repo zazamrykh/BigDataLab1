@@ -1,6 +1,7 @@
 name: Deploy and Test Model Container
 
 on:
+  workflow_call:
   workflow_dispatch: 
   schedule:
     - cron: '0 8 * * *'  # everyday at 8 A M 
