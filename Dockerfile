@@ -7,6 +7,5 @@ WORKDIR /app
 COPY . .
 
 RUN pip install --no-cache-dir -r docker_requirements.txt
-RUN python -c "import gensim.downloader as api; api.load('glove-wiki-gigaword-50')"
 
 CMD ["python", "src/api.py", "glove-wiki-gigaword-50", "./runs/train1/best_catboost_model.cbm"]
