@@ -95,7 +95,6 @@ class DataProcessor:
             self.logger.info("Feature examples:")
             self.logger.info(df[["Text", "Summary", "cos_sim_good_text", "cos_sim_bad_text", "cos_sim_good_summary", "cos_sim_bad_summary"]].head())
 
-            df.drop(columns=["Id", "UserId", "ProfileName", "ProductId", "Text", "Summary", 'Time'], inplace=True)
             self.logger.info("Features added successfully")
             return df
         except Exception as e:
